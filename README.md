@@ -9,6 +9,7 @@ This application serves as a complete offline POS system for small to medium-siz
 
 ### Core Features:
 - **Product Management System**: Complete CRUD operations for inventory items with barcode/QR code support.
+- **Smart Add Product & QR Generation**: Rapidly add new products using the device camera for images, auto-generate unique barcodes, and instantly download high-quality QR codes directly to the device's gallery.
 - **Smart Checkout System**: Rapid cart building via camera-based barcode scanning or manual entry, and robust order calculation functionality.
 - **Bluetooth Thermal Printing**: Direct integration with thermal printers (`print_bluetooth_thermal`) to instantly output physical receipts.
 - **Shop Settings & Customization**: Centrally managed shop details printed dynamically on receipts.
@@ -55,6 +56,7 @@ lib/
 
 - **Rapid Billing Entry**: A cashier launches the app, navigates to the checkout page, and uses the device camera to instantly scan product barcodes. The products are added to the cart, the total is calculated including taxes, and a receipt is finalized.
 - **Physical Receipt Generation**: After checkout confirmation, the app triggers a connected external Bluetooth thermal POS printer to instantly print an itemized paper receipt with the shop’s header.
+- **Smart Product Onboarding**: A manager uses the "Smart Add Product" page to take a photo of a new item. The app automatically generates a unique barcode, binds the SKU, and produces a scannable QR Code that the manager instantly downloads to the gallery to print as a label.
 - **Inventory Sideloading**: A manager opens the Product feature to add new stock to the local database, taking a picture of the barcode to bind the SKU for future lightning-fast checkouts.
 - **No-Connection Operation**: The business operates a stall at an exhibition with poor networking. The app functions entirely via its embedded Hive local database and Bluetooth, completely undisturbed by network drops.
 

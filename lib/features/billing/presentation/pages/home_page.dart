@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:flutter_vibrate/flutter_vibrate.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 
 import '../../../billing/presentation/bloc/billing_bloc.dart';
@@ -51,12 +50,6 @@ class _HomePageState extends State<HomePage> {
         }
 
         _lastScanTimes[rawValue] = now;
-
-        // Vibrate
-        final canVibrate = await Vibrate.canVibrate;
-        if (canVibrate) {
-          Vibrate.feedback(FeedbackType.success);
-        }
 
         if (mounted) {
           context.read<BillingBloc>().add(ScanBarcodeEvent(rawValue));
